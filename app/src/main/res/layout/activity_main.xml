@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    android:id="@+id/drawerlayout"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navigationview"
+            app:headerLayout="@layout/headerfile"
+            app:menu="@menu/sidemenu"
+            android:layout_gravity="start"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Menu"
+            android:paddingRight="20dp"
+            app:logo="@drawable/ic_baseline_menu_24"
+            app:titleTextColor="@color/white"
+            app:titleMarginStart="5dp"
+            android:layout_marginBottom="10dp"
+            tools:ignore="MissingConstraints"/>
+
+
+
+    <EditText
+        android:id="@+id/inputMessage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/cornerbutton1"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="Input"
+        android:fontFamily="@font/myfont1"
+        android:padding="30dp"
+        android:textColorHint="#CC000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV1" />
+
+    <TextView
+        android:id="@+id/tV1"
+        android:layout_width="414dp"
+        android:layout_height="52dp"
+        android:background="#000000"
+        android:text="Caesar Cipher"
+        android:gravity="center"
+        android:textColor="#D3CECE"
+        android:textSize="30sp"
+        android:fontFamily="@font/myfont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnencrypt"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="25dp"
+        android:text="Encrypt"
+        android:background="@drawable/cornerbutton2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/myfont1"
+        app:icon="@drawable/ic_baseline_encryption_24"
+        app:backgroundTint="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btndecrypt"
+        app:layout_constraintEnd_toStartOf="@+id/btndecrypt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btndecrypt"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/cornerbutton2"
+        android:text="Decrypt"
+        app:icon="@drawable/ic_baseline_no_encryption_24"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/myfont1"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnencrypt"
+        app:layout_constraintTop_toBottomOf="@+id/output" />
+
+
+    <EditText
+        android:id="@+id/key_dt"
+        android:layout_width="159dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/cornerbutton2"
+        android:hint="Key"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textColorHint="@color/black"
+        android:fontFamily="@font/myfont1"
+        app:backgroundTint="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/output"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputMessage"
+        app:layout_constraintVertical_bias="0.45"/>
+
+    <EditText
+        android:id="@+id/output"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/cornerbutton1"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="Output"
+        android:textColorHint="#CC000000"
+        android:textSize="20sp"
+        android:fontFamily="@font/myfont1"
+        app:layout_constraintBottom_toTopOf="@+id/key_dt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputMessage"
+        app:layout_constraintVertical_bias="0.515" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
