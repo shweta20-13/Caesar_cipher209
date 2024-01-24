@@ -1,0 +1,1 @@
+It is a type of Cryptographic algorithm used for Encryption/Decryption of texts and we can also use this for password encrypter.This algorithm is enhanced version of older one which is enhanced by us by using 25 extra special characters which makes it more stronger than earlier.
